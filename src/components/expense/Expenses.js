@@ -1,5 +1,5 @@
 import React from "react";
-import Card from "./Card";
+import Card from "../ui/Card";
 import ExpenseItem from "./ExpenseItem";
 import "./Expenses.css";
 
@@ -24,11 +24,11 @@ const Expenses = () => {
       price: 200.37,
     },
     {
-        id: 4,
-        date: new Date(2022, 6, 6),
-        title: "Chair",
-        price: 300.37,
-    }
+      id: 4,
+      date: new Date(2022, 6, 6),
+      title: "Chair",
+      price: 300.37,
+    },
   ];
   return (
     <Card className="expenses">
