@@ -41,3 +41,8 @@
     font-size: 14px;
   }
 }
+
+.dollar {
+  color: #00e676;
+  margin-left: .2rem;
+}
