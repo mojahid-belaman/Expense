@@ -3,7 +3,7 @@ import './ExpenseFilter.css'
 
 const ExpenseFilter = (props) => {
     const funcChangeFilter = (e) => {
-        props.funcFilter(e.target.value)
+        props.onChangeFilter(e.target.value)
     }
   return (
     <div className='filter'>

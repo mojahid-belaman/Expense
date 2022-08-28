@@ -1,13 +1,13 @@
 export const expensesData = [
     {
       id: 1,
-      date: new Date(2022, 7, 6),
+      date: new Date(2021, 7, 6),
       title: "Car Insurance",
       price: 300.37,
     },
     {
       id: 2,
-      date: new Date(2022, 4, 2),
+      date: new Date(2021, 4, 2),
       title: "Laptop",
       price: 1000.37,
     },
