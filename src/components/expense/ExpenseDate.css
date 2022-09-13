@@ -1,7 +1,7 @@
 .expense-date {
     display: flex;
     flex-direction: column;
-    width: 5rem;
+    width: 6rem;
     border: 1px solid #fff;
     border-radius: 5px;
     align-items: center;
@@ -11,7 +11,7 @@
 
 .expense-date__month,
 .expense-date__year {
-    font-weight: bolder;
+    font-weight: bold;
 }
 
 .expense-date__day {

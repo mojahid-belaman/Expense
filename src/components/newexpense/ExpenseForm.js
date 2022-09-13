@@ -42,6 +42,9 @@ function ExpenseForm(props) {
             }))
         }
     }
+    const handleClick = () => {
+        props.setShow(false)
+    }
   return (
     <form onSubmit={handleSubmit}>
         <div className='expenseForm___controls'>
@@ -60,6 +63,7 @@ function ExpenseForm(props) {
 
         </div>
         <div className='expenseForm__button'>
+            <button onClick={handleClick}>Cancel</button>
             <button type='submit'>Add Expense</button>
         </div>
     </form>

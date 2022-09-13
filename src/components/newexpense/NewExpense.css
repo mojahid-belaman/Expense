@@ -3,3 +3,24 @@
     margin: 2rem auto;
     border-radius: 10px;
 }
+
+.addExpense {
+    display: flex;
+    justify-content: center;
+}
+
+.addExpense button {
+    width: 170px;
+    padding: .8rem 0;
+    background-color: #2196f3;
+    color: #FFF;
+    border-radius: 10px;
+    border: 1px solid #1769aa;
+    font-size: 1rem;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.addExpense button:hover {
+    background-color: #01579b;
+}
