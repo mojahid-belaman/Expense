@@ -12,7 +12,7 @@ function App() {
     });
   };
   return (
-    <div className="h-screen bg-primary py-10 overflow-hidden">
+    <div className="bg-primary h-screen py-10 overflow-y-auto">
       <div className="container mx-auto flex flex-col space-y-5">
         <NewExpense onAddExpense={addExpense} />
         <Expenses items={expenses} />
