@@ -1,6 +1,10 @@
 import React, { useState } from 'react'
 import Swal from 'sweetalert2'
-import './ExpenseForm.css'
+import Button from '../atoms/Button';
+import Label from '../atoms/Label';
+import InputText from '../atoms/InputText';
+import InputNumber from '../atoms/InputNumber';
+import InputDate from '../atoms/InputDate';
 
 function ExpenseForm(props) {
 
@@ -47,24 +51,24 @@ function ExpenseForm(props) {
     }
   return (
     <form onSubmit={handleSubmit}>
-        <div className='expenseForm___controls'>
-            <div className='expenseForm__control'>
-                <label>Title</label>
-                <input type='text' placeholder='Enter Title...' maxLength="15" value={enteredtitle} onChange={handleChangeTitle} />
+        <div className='flex flex-col space-x-0 md:space-x-5 md:flex-row mb-0 md:mb-5'>
+            <div className='flex-1 flex flex-col justify-center py-2 mb-4 md:mb-0'>
+                <Label text={'Title'}/>
+                <InputText value={enteredtitle} onChange={handleChangeTitle}/>
             </div>
-            <div className='expenseForm__control'>
-                <label>Price</label>
-                <input type='number' min="0.01" step="0.01" placeholder='Enter Price...' value={enteredprice} onChange={handleChangePrice} />
+            <div className='flex-1 flex flex-col justify-center py-2 mb-4 md:mb-0'>
+                <Label text={'Price'}/>
+                <InputNumber value={enteredprice} onChange={handleChangePrice}/>
             </div>
-            <div className='expenseForm__control'>
-                <label>Date</label>
-                <input type='date' value={entereddate} onChange={handleChangeDate} />
+            <div className='flex-1 flex flex-col justify-center py-2 mb-4 md:mb-0'>
+                <Label text={'Date'}/>
+                <InputDate value={entereddate} onChange={handleChangeDate}/>
             </div>
 
         </div>
-        <div className='expenseForm__button'>
-            <button onClick={handleClick}>Cancel</button>
-            <button type='submit'>Add Expense</button>
+        <div className='flex justify-center space-x-10'>
+            <Button onClick={handleClick} text={"Cancel"}/>
+            <Button type={'submit'} text={"Add Expense"}/>
         </div>
     </form>
   )

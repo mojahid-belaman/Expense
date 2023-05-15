@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Card from "../ui/Card";
 import ExpenseForm from "./ExpenseForm";
-import "./NewExpense.css";
+import Button from "../atoms/Button";
 
 const NewExpense = (props) => {
   const [show, setShow] = useState(false);
@@ -16,10 +16,10 @@ const NewExpense = (props) => {
     props.onAddExpense(expenseData);
   };
   return (
-    <Card className="expenses">
+    <Card>
       {!show && (
-        <div className="addExpense">
-          <button onClick={handleClick}>Add New Expense</button>
+        <div className="flex justify-center">
+          <Button onClick={handleClick} text={'New Expense'} />
         </div>
       )}
       {show && (

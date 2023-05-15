@@ -1,20 +1,22 @@
 import React, { useState } from "react";
 import Expenses from "./components/expense/Expenses";
 import NewExpense from "./components/newexpense/NewExpense";
-import {expensesData} from './library/expensesData'
+import { expensesData } from "./library/expensesData";
 
 function App() {
-  const [expenses, setExpenses] = useState(expensesData)
+  const [expenses, setExpenses] = useState(expensesData);
 
   const addExpense = (expense) => {
-    setExpenses(prevExpense => {
-      return [expense, ...prevExpense]
-    })
-  }
+    setExpenses((prevExpense) => {
+      return [expense, ...prevExpense];
+    });
+  };
   return (
-    <div>
-      <NewExpense onAddExpense={addExpense} />
-      <Expenses items={expenses} />
+    <div className="h-screen bg-primary py-10 overflow-hidden">
+      <div className="container mx-auto flex flex-col space-y-5">
+        <NewExpense onAddExpense={addExpense} />
+        <Expenses items={expenses} />
+      </div>
     </div>
   );
 }

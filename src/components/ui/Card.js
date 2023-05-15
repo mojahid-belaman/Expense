@@ -1,9 +1,7 @@
 import React from "react";
-import "./Card.css";
 
 const Card = (props) => {
-  const classes = "card " + props.className;
-  return <div className={classes}>{props.children}</div>;
+  return <div className="bg-primary p-5 rounded-lg shadow-lg border border-secondary">{props.children}</div>;
 };
 
 export default Card;

@@ -1,5 +1,4 @@
 import React from "react";
-import "./ExpenseDate.css";
 
 const ExpenseDate = ({date}) => {
   const newDate = new Date(date);
@@ -8,10 +7,10 @@ const ExpenseDate = ({date}) => {
   const year = newDate.getFullYear().toString();
 
   return (
-    <div className="expense-date">
-      <div className="expense-date__month">{month}</div>
-      <div className="expense-date__day">{day}</div>
-      <div className="expense-date__year">{year}</div>
+    <div className="py-1 w-24 flex space-y-2 flex-col items-center text-white bg-[#4dabf5] border border-white rounded-md">
+      <div>{month}</div>
+      <div>{day}</div>
+      <div>{year}</div>
     </div>
   );
 };
