@@ -1,6 +1,6 @@
 const Label = (props) => {
     return (
-        <label>{props.text}</label>
+        <label className="text-xl font-semibold">{props.text}</label>
     )
 }
 
