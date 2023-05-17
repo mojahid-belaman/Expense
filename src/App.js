@@ -7,9 +7,7 @@ function App() {
   const [expenses, setExpenses] = useState(expensesData);
 
   const addExpense = (expense) => {
-    setExpenses((prevExpense) => {
-      return [expense, ...prevExpense];
-    });
+    setExpenses((prevExpense) => [expense, ...prevExpense]);
   };
   return (
     <div className="bg-primary h-screen py-10 overflow-y-auto">
