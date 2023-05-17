@@ -7,10 +7,10 @@ const ExpenseDate = ({date}) => {
   const year = newDate.getFullYear().toString();
 
   return (
-    <div className="py-1 w-24 flex space-y-2 flex-col items-center text-white bg-[#4dabf5] border border-white rounded-md">
-      <div>{month}</div>
+    <div className="py-1 w-40 flex space-y-2 flex-col items-center text-white bg-[#4dabf5] border border-white rounded-md">
+      <div className="font-bold">{month}</div>
       <div>{day}</div>
-      <div>{year}</div>
+      <div className="font-bold">{year}</div>
     </div>
   );
 };
