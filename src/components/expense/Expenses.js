@@ -4,14 +4,14 @@ import ExpenseFilter from "./ExpenseFilter";
 import ExpenseList from "./ExpenseList";
 
 const Expenses = (props) => {
-  const [filterYear, setFilterYear] = useState("2022")
+  const [filterYear, setFilterYear] = useState("2022");
   const filterHandle = (year) => {
-    setFilterYear(year)
-  }
+    setFilterYear(year);
+  };
   const filterExpense = props.items.filter((expense) => {
     return expense.date.getFullYear().toString() === filterYear;
-  })
-  
+  });
+
   return (
     <Card>
       <ExpenseFilter selected={filterYear} onChangeFilter={filterHandle} />
