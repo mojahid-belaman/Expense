@@ -44,11 +44,10 @@ function ExpenseForm(props) {
                 confirmButtonText: 'Cancel',
                 confirmButtonColor: '#2e7d32',
             }))
+            props.onClick()
         }
     }
-    const handleClick = () => {
-        props.setShow(false)
-    }
+
   return (
     <form onSubmit={handleSubmit}>
         <div className='flex flex-col space-x-0 md:space-x-5 md:flex-row mb-0 md:mb-5'>
@@ -67,7 +66,7 @@ function ExpenseForm(props) {
 
         </div>
         <div className='flex justify-center space-x-10'>
-            <Button onClick={handleClick} text={"Cancel"}/>
+            <Button onClick={props.onClick} text={"Cancel"}/>
             <Button type={'submit'} text={"Add Expense"}/>
         </div>
     </form>
