@@ -1,7 +1,7 @@
 import React from "react";
 import Label from "../atoms/Label";
 
-const dates = [2022, 2021, 2020, 2019];
+const dates = [2023, 2022, 2021, 2020, 2019];
 
 const ExpenseFilter = (props) => {
   const funcChangeFilter = (e) => {
