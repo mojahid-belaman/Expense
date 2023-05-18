@@ -5,8 +5,11 @@ import Button from "../atoms/Button";
 
 const NewExpense = (props) => {
   const [show, setShow] = useState(false);
-  const handleClick = () => {
+  const handleShowClick = () => {
     setShow(true);
+  };
+  const handleHideClick = () => {
+    setShow(false);
   };
   const savaDataExpense = (expense) => {
     const expenseData = {
@@ -19,11 +22,11 @@ const NewExpense = (props) => {
     <Card>
       {!show && (
         <div className="flex justify-center">
-          <Button onClick={handleClick} text={'New Expense'} />
+          <Button onClick={handleShowClick} text={'New Expense'} />
         </div>
       )}
       {show && (
-        <ExpenseForm onSaveExpenseData={savaDataExpense} setShow={setShow} />
+        <ExpenseForm onSaveExpenseData={savaDataExpense} onClick={handleHideClick} />
       )}
     </Card>
   );
