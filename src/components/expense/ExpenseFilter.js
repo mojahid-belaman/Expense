@@ -11,7 +11,7 @@ const ExpenseFilter = (props) => {
     <div className="flex justify-between items-center mb-5">
       <Label text={"Filter By Year: "} />
       <select
-        className="p-2 rounded-lg outline-none border border-[#039be5] text-[#616161] font-semibold text-xl"
+        className="p-2 w-40 rounded-lg outline-none border border-[#039be5] text-[#616161] font-semibold text-xl"
         select={props.selected}
         onChange={funcChangeFilter}
       >
